@@ -1,5 +1,6 @@
-
-#include<bits/stdc++.h>
+#include<iostream>
+#include<stack>
+#include<queue>
 
 using namespace std;
 
@@ -18,50 +19,51 @@ int main() {
             switch(a) 
             {
                 case 1:
-                    q.push(a);
-                    s.push(a);
-                    pq.push(a);
+                    q.push(b);
+                    s.push(b);
+                    pq.push(b);
                 break;
                 case 2:
-                    typeData[0] = (q.top() == b);
-                    typeData[1] = (s.top() == b);
-                    typeData[3] = (pq.top() == b);
+                    typeData[0] = (typeData[0] != -1 && q.front() == b)? 1 : -1;
+                    typeData[1] = (typeData[1] != -1 && s.top() == b)? 1 : -1;
+                    typeData[2] = (typeData[2] != -1 && pq.top() == b)? 1 : -1;
                     q.pop();
                     s.pop();
                     pq.pop();
                 break;
             }
         }
-    }
-
-    
-    if( (typeData[0]==1 && (typeData[1] || typeData[2])) || 
-        (typeData[1]==1 && (typeData[0] || typeData[2]))) || 
-        (typeData[2]==1 && (typeData[0] || typeData[1])))
-    {
-            printf("not sure");
-    } else if(typeData[0]==1) {
-        printf("queue");
-            
-    } else if(typeData[1]==1) {
-        printf("stack");
-    } else if(typeData[2]==1) {
-        printf("priority queue");
-    } else
-        printf("impossible");
-    
-    while (!s.empty())
-    {
-        s.pop();
-    }
-    
-    while (!q.empty())
-    {
-        q.pop();
-    }
-    
-    while(!pq.empty()) {
-        pq.pop();    
+        if( (typeData[0]==1 && (typeData[1]==1 || typeData[2]==1)) || 
+            (typeData[1]==1 && (typeData[0]==1 || typeData[2]==1)) || 
+            (typeData[2]==1 && (typeData[0]==1 || typeData[1]==1)))
+        {
+            printf("not sure\n");
+        } else if(typeData[0]==1) {
+            printf("queue\n");
+                
+        } else if(typeData[1]==1) {
+            printf("stack\n");
+        } else if(typeData[2]==1) {
+            printf("priority queue\n");
+        } else
+            printf("impossible\n");
+        
+        while (!s.empty())
+        {
+            s.pop();
+        }
+        
+        while (!q.empty())
+        {
+            q.pop();
+        }
+        
+        while(!pq.empty()) {
+            pq.pop();    
+        }
+        typeData[0] = 0;
+        typeData[1] = 0;
+        typeData[2] = 0;
     }
     
     return 0;
