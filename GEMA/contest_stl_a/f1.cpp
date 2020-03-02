@@ -1,3 +1,4 @@
+
     #include<iostream>
     #include<vector>
     #include<algorithm>
@@ -28,6 +29,7 @@
         long long int ans = 0;
         for(long long int i = 0; i < v.size(); ++i)
         {
+            //cout << v[i].first << ' ' << v[i].second << endl;
             ans += (v[i].first*(i)) + (v[i].second*(v.size()-i-1));
         }
         cout << ans << '\n';
