@@ -54,10 +54,10 @@ int main()
     for(int i = 0; i < t; ++i)
     {
         cin >> n;
+        memset(q, 0, n*sizeof(int));
         backtrack(1, 0, q);
         cout << maxn << '\n';
         maxn = 0;
-        memset(q, 0, n*sizeof(int));
     }
     return 0;
 }

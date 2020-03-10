@@ -3,66 +3,52 @@
 #include<map>
 #include<queue>
 #include<string.h>
+#define MAX 100000
 
 using namespace std;
 
-bool valid(int col[], int lin[], int x, int y)
-{
-    if(col[x] != -1 || lin[y] != -1)
-        return false;
+int queen[8], tab[8];
 
-    int h, l;
-    for(int i = 0; i < x; ++i)
+bool valid(int column)
+{
+    for(int i = 0; i < column; ++i)
     {
-        if(col[i] != -1) {
-            h = x - i;
-            for(int j = 0; j < y; ++j)
-            {
-                if(lin[j]!=-1) {
-                    l = y - i;
-                    if(l == h) // se a altura de distancia entre a rinha atual e a prev são igual, simultaneamente à largura, então estão na diagonal;
-                        return false;
-                }
-            }
-        }
+        if(tab[column]==tab[i] ||
+            (abs(tab[column] - tab[i]) == abs(i - column)))
+            return false;
     }
-    cout << "aaaa\n";
     return true;
 }
 
-void backtracking(int col[], int lin[], int column) 
-{
+int backtracking(int column) 
+{   
+    if(column == 8)
+        return 0;
+    int resp = MAX;
     for(int i = 0; i < 8; ++i)
     {
-        if(valid(col, lin, column, i)) 
+        tab[column] = i;
+        if(valid(column))
         {
-            col[column] = i;
-            lin[i] = column;
-            if(column < 7)
-                backtracking(col, lin, column + 1); 
-            else
-            {
-                cout << "bbbbb";
-                for(int j = 0; j < 8; ++j)
-                {
-                    cout << col[j] << ' ' << lin[j] << endl;
-                }
-                return;
-            }
+            int respMove = (queen[column]!=i+1)? 1 + backtracking(column+1) : backtracking(column+1);
+            resp = min(resp, respMove);
         }
-        //lin[i] = -1;
     }
-
+    return resp;
 }
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    //ios_base::sync_with_stdio(false);
+    //cin.tie(NULL);
     
-    int col[8], lin [8];
-    memset(col, -1, 8*sizeof(int));
-    memset(lin, -1, 8*sizeof(int));
-    backtracking(col, lin, 0); 
+    int i = 0, j = 0;
+    while(cin >> queen[i]) {
+        if(i == 7) {
+            cout << "Case " << ++j << ": " << backtracking(0) << '\n'; 
+            i = -1;
+        }
+        ++i;
+    }
     return 0;
 }
