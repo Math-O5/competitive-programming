@@ -39,8 +39,8 @@ int backtracking(int column)
 
 int main()
 {
-    //ios_base::sync_with_stdio(false);
-    //cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     
     int i = 0, j = 0;
     while(cin >> queen[i]) {
