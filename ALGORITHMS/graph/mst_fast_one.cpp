@@ -1,3 +1,4 @@
+// mst is kruskal = generate the minimal tree in the graph
 #include<iostream>
 #include<vector>
 #include<queue>

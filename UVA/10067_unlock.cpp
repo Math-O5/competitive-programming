@@ -89,6 +89,11 @@ void openLock() {
     pq.push(make_pair(0,aux));
     forb[stoi(arrayToString(aux))] = 1;
 
+    int h = nearestUnlock(aux);
+    if(h == 0) {
+        cout << "0\n";
+        return;
+    }
     while(!pq.empty())
     {
         State u(pq.top().second);
@@ -101,8 +106,7 @@ void openLock() {
             State v(next(u.first + moves[i][0]), next(u.second + moves[i][1]), next(u.third + moves[i][2]), next(u.forth + moves[i][3]), u.g+1);        
             if(valid(arrayToString(v)))
             {
-                int h = nearestUnlock(v);
-                v.moveSum = u.moveSum + h;
+                h = nearestUnlock(v);
                 if(h == 0) {
                     ans.push_back(g+1);
                     //return;
