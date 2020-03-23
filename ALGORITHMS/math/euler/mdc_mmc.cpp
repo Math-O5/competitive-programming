@@ -33,6 +33,6 @@ int mmc(int x, int y) {
 int main()
 {
     cout << mmc(5,3) << endl;
-
+    cout << ndc(5,3) << endl;
     return 0;
 }
