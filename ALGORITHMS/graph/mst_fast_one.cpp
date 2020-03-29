@@ -1,54 +1,28 @@
-// mst is kruskal = generate the minimal tree in the graph
 #include<iostream>
-#include<vector>
 #include<queue>
-#define MAX 10000
+#define MAX 100000
 using namespace std;
 
-int n, a, b, c;
-priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int,int>>> pq;;
-int component[MAX], previ[MAX];
+const int INF = 0x3f3f3f3f;
+
+priority_queue<Aresta, vector<Aresta>, comp> pq;
 
 struct Aresta {
-    int x, y, w;
-    
-    Aresta(int x, int y, int z) : x(x), y(y), w(w) {
-        
+    int a, b, w;
+    Aresta(int a, int b, int w): a(a), b(b), w(w) {}
+};
+
+struct comp {
+    bool operator()(Aresta const& a, Aresta const& b) {
+        return a.w > b.w;
     }
 };
 
-int mst() {
-    previ[pq.top().second] = pq.top().first;
-    component[pq.top().second] = component[pq.top().first] = 1;
-    pq.pop();
-    int u, v;
-    while(!pq.empty())
-    {
-        u = pq.top().first;
-        v = pq.top().second;
-        pq.pop();
-        
-        previ[v] = u;
-        component[u] = component[v] = 1;
-    }
+void kruskal()
+{
     
-    return v;
 }
 
-int main()
-{
-    cin >> n;
-    for(int i = 0; i < n; ++i)
-    {
-        cin >> a >> b >> c;
-        pq.push(make_pair(a, b));
-    }
-    
-    int u = mst();
-    
-    while(previ[u]) {
-        cout << previ[u] << ' ';
-        u = previ[u];
-    }
+int main() {
     return 0;
 }
