@@ -107,8 +107,8 @@ mii primefactors2(mii factor, ll n)
 
 int main() 
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    // ios_base::sync_with_stdio(false);
+    // cin.tie(NULL);
     int n;
 
     sieve(100);
@@ -122,6 +122,8 @@ int main()
                 factors[i] = primefactors2(factors[i-1], i);
             }
         }
+
+
         printf("%3d! =", n);
 
         int index = 1;
