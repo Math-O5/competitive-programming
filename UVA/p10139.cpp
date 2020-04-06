@@ -81,7 +81,7 @@ int main()
             break;
         }
         
-        if(!mFactors.size())
+        if(m == 1)
             ok = 1;
         if(!ok)
             cout << m << " does not divide " << n << "!\n"; 
