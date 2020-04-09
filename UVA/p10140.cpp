@@ -1,98 +1,84 @@
-#include<iostream>
-#include<bitset>
-#include<vector>
-#include<algorithm>
-#include<math.h>
-#define MAX 100000
-using namespace std;
+#include <stdio.h>
+#include <string.h>
 
-typedef long long int ll;
-typedef vector<ll> vi;
-bitset<MAX> bs;
-ll n, m;
-vi primes;
-ll up, low, lower, upper, found;
-
-const int INF = 0x3f3f3f3f;
+typedef long long ll;
+const int MAX = 1e6+5;
+bool bs[MAX], vis[MAX];
+int head, 
+    primes[MAX];
 
 void sieve()
 {
-    bs.set();
-    bs[0] =  bs[1] = 0;
-    for(ll i = 2; i <= MAX; ++i)
-    {   
-        if(bs[i])
+    // for all numbers, check if they are primes!
+    for(ll i = 2;i < MAX;++i) {
+        if(!bs[i])
         {
-            for(ll j = i * i; j <= MAX; j += i)
+            primes[++head] = i;
+            // while there is multiples to remove, remove them.
+            for(ll j = i*i; j <= MAX; j += i)
             {
-                bs[j] = 0;
+                bs[j] = 1;
             }
-            primes.push_back(i);
         }
-
     }
 }
 
-bool isPrime(ll u) 
+// Check if the new values is more far
+void maxRange(ll &range, ll a, ll b, ll &p1, ll &p2)
 {
-    if(u <= MAX) return bs[u];
-    for(int i = 0; i < (int)primes.size() && primes[i] <= (ll)sqrt(u); ++i)
+    ll r1 = b - a;
+    if(range < r1) 
     {
-        if(u % primes[i] == 0)
-            return false;
+        range = r1;
+        p1 = a;
+        p2 = b;
     }
-    return true;
 }
 
-int main()
+// Check if the new values is more near
+void minRange(ll &range, ll a, ll b, ll &p1, ll &p2)
 {
-    // ios_base::sync_with_stdio(false);
-    // cin.tie(NULL);
-    
+    ll r1 = b - a;
+    if(range > r1) 
+    {
+        range = r1;
+        p1 = a;
+        p2 = b;
+    }
+}
+
+int main() 
+{
+    ll l, r;
     sieve();
-    while(cin >> n >> m)
+    while(scanf("%lld%lld", &l, &r)!= EOF)
     {
-        found = 1;
-        ll j = n-1;
-        do {
-            j++;
+        memset(vis, 0, MAX);     
+        if(l == 1)
+            vis[0] = 1;
+        // For all primes
+        for(int i = 1; i <= head; ++i)
+        {   
+            // mark all composite numbers, like 
+            // K factor has an upper and lower bound (L / prim [], R / prim [])
+            for(ll j = l/primes[i]; j <= r/ primes[i]; ++j) {
+                ll aux = primes[i]*j;
+                if(j > 1 && aux >= l) vis[aux-l]= 1;
+            }    
+        }
 
-        } while(isPrime(j)!=1 && j <= m);
-        low = j;
-        lower = j;
-        ++j;
-        for(ll i = j; i <= m; i += 1)
-        {
-
-            if(isPrime(i)) {
-                if(found==1)
-                {
-                    up = i;
-                    upper = i;
-                    ++found;
-                } else if(found > 1)
-                {
-                    if(up - low > i - j) {
-                        low = j;
-                        up = i;
-                    } else if(upper - lower < i - j)
-                    {
-                        lower = j;
-                        upper = i;
-                    }
-                }
-
-                j = i;
+        ll ok = 0, p, p1, p2, p3, p4, minN =1LL<<60, maxN = 0;
+        for(ll i = l; i <= r; ++i) {
+            if(vis[i-l]) continue;
+            if(ok == 0) {ok = 1;} else {
+                minRange(minN, p, i, p1, p2);
+                maxRange(maxN, p, i, p3, p4);
             }
+            p = i;
         }
 
-        if(found <= 1)
-        {
-            cout << "There are no adjacent primes.\n";
-        } else {
-            cout << low << ',' << up << " are closest, " << lower << ',' << upper << " are most distant.\n";
-        }
-            
+        if(!maxN) printf("There are no adjacent primes.\n");
+        else printf("%lld,%lld are closest, %lld,%lld are most distant.\n", p1, p2, p3, p4);
     }
     return 0;
 }
