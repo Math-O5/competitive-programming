@@ -1,21 +1,3 @@
-/*
-    Input n
-    Output n is prime or not.
-
-    Crivo:
-        Check if a integer number bigger than 1 can divide them.
-
-        Ingenius approch:
-            Check all (2, n-1);
-        Better:
-            Check all (2, n/2);
-        Better:
-            Check all (2, sqrt(n))
-            because n / sqrt(n) * sqrt(n) <= 1,
-        Better:
-            Check all primes in range (2, sqrt(n))
-            complexity: O(sqrt(n)/log(sqrt(n)))
-*/
 
 #include<iostream>
 #include<vector>

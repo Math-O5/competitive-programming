@@ -18,21 +18,18 @@ using namespace std;
         mdc(x,y) = mdc(y, x%y) = mdc(y, r)
         mdc(x, 0) = x.
 */
-int mdc(int x, int y) {
-    return (y==0? x : mdc(y, x%y));
-}
+long long mdc(long long x, long long y) { return (y==0)? x : mdc(y, x%y);}
 
 /*
     Minimo multiplo comum:
     mmc(x,y) * mdc(x,y) = x * y.
+    (y / mdc) is first to avoid overflow.
 */
-int mmc(int x, int y) {
-    return (x*y/mdc(x,y));
-}
+long long mmc(long long x, long long y) { return (x* (y / mdc(x,y)) ); }
 
 int main()
 {
     cout << mmc(5,3) << endl;
-    cout << ndc(5,3) << endl;
+    cout << mdc(5,3) << endl;
     return 0;
 }
