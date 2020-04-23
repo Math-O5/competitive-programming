@@ -4,7 +4,7 @@
 #include<queue>
 #include<vector>
 #include<functional>
-#define For(i, a, b) for(int i = a; i <= b; ++i)
+
 using namespace std;
 
 int n, table[3][3], moves[4][2] = {{0,1},{1,0},{0,-1},{-1,0}}, x, y;
@@ -36,27 +36,23 @@ string matrixToString()
             u.push_back(char(table[i][j]+'0'));
         }
     }
-    //cout << "aaaa\n";
-    //cout << u << '\n';
+
     return u;
 }
 
 
 void stringToMatrix(string& b)
 {
-    //cout << "here\n";
     for(int i = 0; i < 3; ++i)
     {
         for(int j = 0; j < 3; ++j)
         {
             table[i][j] = int(b[i*3 +j]-'0');
-            // cout << table[i][j];
             if(table[i][j]==9) {
                 x = i; y = j;
             }
         }
     }
-    //cout << '\n';
 }
 
 int solutionFar(string& v1) {
@@ -72,9 +68,7 @@ bool valid(int i, int j) {
 
 string swapMatrix(int x1, int y1) 
 {
-    //cout << "swap" << table[x][y] << "  " << table[x1][y1] << endl;
     swap(table[x][y], table[x1][y1]);
-    //cout << "swap" << table[x][y] << "  " << table[x1][y1] << endl;
 
     string b = matrixToString();
     swap(table[x][y], table[x1][y1]);
@@ -93,7 +87,6 @@ void bfs()
     while(!pq.empty())
     {
         stateA = pq.top().second;
-        //cout << "stateA "<< stateA.state << endl;
         pq.pop();
         stringToMatrix(stateA.state);
         for(int i = 0; i < 4; ++i)
@@ -103,7 +96,6 @@ void bfs()
             if(valid(x1, y1))
             {
                 v = swapMatrix(x1,y1);
-                //cout << "cheguei " << v << ' ' << vis[v] << endl;
                 if(!vis[v])
                 {
                     vis[v] = true;
@@ -143,8 +135,6 @@ int main()
                 else
                     table[j][k] = aux[0] - '0';
             }
-            
-
         }
         bfs();
         vis.clear();
