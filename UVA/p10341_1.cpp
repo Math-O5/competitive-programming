@@ -24,7 +24,7 @@ int main()
             double aux = solve(mid);
             if(fabs(aux) < 0.00001)
             {
-                cout << setprecision(4) << mid << '\n';
+                cout << setprecision(4) << fixed << mid << '\n';
                 break;
                 //i did it
             } else 
