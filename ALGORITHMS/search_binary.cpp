@@ -13,6 +13,7 @@ double f(double x) {
     // function f(x)
 }
 
+// Slowly approximation f soluion
 double bissection(double low, double high) {
     double center;
     while(high - low > eps) {

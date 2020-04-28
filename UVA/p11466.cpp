@@ -54,8 +54,8 @@ mii factors(ll n)
 }
 
 int main() {
-    //ios_base::sync_with_stdio(false);
-    //cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     ll n;
     mii m;
     sieve(MAX-1);
