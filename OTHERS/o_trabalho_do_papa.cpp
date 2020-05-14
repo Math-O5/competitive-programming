@@ -4,39 +4,49 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include<bitset>
 
 using namespace std;
 
 vector<pair<int, int>> caixas;
+vector<int> dp[1002];
+int n, a, b; // n : number packs, a and b auxiliars.
 
-int knapsack(bitset<1010> bs, int peso, int index) {
-    int ans = 0 ;
-    for(int i = 0; i < (int)caixas.size(); ++i) {
-        if(bs[i] == 1) {
-            bs[i] = 0;
-            if(peso <= caixas[i].second)  {
-                ans = max(ans, (1 + knapsack(bs, peso + caixas[i].first, (index + 1) % (int)caixas.size()));
-            }
-            bs[i] = 1;
-        }
+bool mySort(pair<int, int> a, pair<int, int> b) {
+    return (a.second >= b.second)? true : false;
+}
+
+int recursao_dp(int index, int stand) {
+    // the first row must be all zeros
+    if(index == n)
+        return 1;
+
+    int pega, nao_pega;
+    if(caixas[index].first > stand) {
+        return dp[stand][index] = recursao_dp(index + 1, stand);
     }
-
-    return ans;
+    return dp[stand][index] = max(1 + recursao_dp(index + 1, min(stand - caixas[index].first, caixas[index].second)), recursao_dp(index + 1, stand));
+   
 }
 
 int main() {
-    bitset<1010> index;
-    int n, a, b; // n : number packs, a and b auxiliars.
 
     cin >> n;
-    while(n--) {
+    for(int j = 0; j < n; ++j)
+    for(int i = 0; i < 1000005; ++i)
+    dp[j].push_back(0);
+
+    int j = n, stand = 0;
+    while(j--) {
         cin >> a >> b;
+        if(b > a) {
+            n--;
+            continue;
+        }
+        stand = max(b, stand);
         caixas.push_back(make_pair(a, b - a));
     }
 
-    index.set();
-    //sort(caixas.begin(), caixas.end(), mySort); // O (n long n )
-    cout << knapsack(index, 100000, 0) << '\n';
+    sort(caixas.begin(), caixas.end(), mySort); // O (n long n )
+    cout << recursao_dp(0, stand) << '\n';
     return 0;
 }

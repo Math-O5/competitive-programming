@@ -6,7 +6,7 @@
 using namespace std;
 
 vector<int> v;
-int dp[220][40];
+int dp[420][220];
 
 int opt(int w, int j) {
     if(j == (int)v.size())
@@ -21,32 +21,38 @@ int opt(int w, int j) {
 }
 
 int main() {
+
     int m, total, aux;  
     char c;
 
-    cin >> m;
+    scanf("%d", &m);
     getchar();
 
     while(m--) {
         total = 0;
         memset(dp, -1, sizeof dp);
-
-        while(cin >> aux) {
+        while(scanf("%d", &aux) != EOF) {
             v.push_back(aux);
             total += aux;
 
             scanf("%c", &c);
-            if(c == '\n') break;
+            if(c == '\n' || c == '\r') {
+                if(c == '\r')
+                    scanf("%c", &c);
+                break;
+            }
         }
 
         if(total % 2 != 0)
-            cout << "NO\n";
+            printf("NO\n");
         else if(opt(total/2, 0) == total/2) {
-            cout << "YES\n";
+            printf("YES\n");
         } else {
-            cout << "NO\n";          
+            printf("NO\n");          
         }
 
+        fflush(stdout);
         v.clear();
     }
+    fflush(stdout);
 }
