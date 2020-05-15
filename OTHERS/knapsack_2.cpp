@@ -1,5 +1,15 @@
 // Hint from: https://codeforces.com/blog/entry/74777
 // Problem https://atcoder.jp/contests/dp/tasks/dp_e
+/*
+    A singularidade deste problema é o o espaço que o "peso" pode assumir,
+    chegando a 10^9, portanto um array não comporta a solução. Por isso é feita uma variação
+    do knapsack em que em vez de maximizar o valor dos itens, procura-se como minizar o peso
+    para obter um dado valor.  
+
+    N < 100           (e2)
+    Valor < 1000      (e3)
+    peso < 1000000000 (e9)
+*/
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -10,21 +20,6 @@ const int INF = 0x3f3f3f3f;
 vector<int> weights(101, INF), values(101, INF); 
 vector<int> dp (1e5+1, INF);
 int n, w, sum;
-
-// int knapsack2_recursivo(int value, int i) {
-//     int nao_pega; 
-//     int pega;
-
-//     if(n -1 == i) {
-//         nao_pega = INF;
-//         pega = weights[i];
-//     } else {
-//         nao_pega = knapsack2_recursivo(value, i + 1);
-//         pega = weights[i] + knapsack2_recursivo(value + values[i], i + 1);
-//     }
-
-//     return dp[value] = min(pega, nao_pega);
-// }
 
 void knapsack2() {
 
@@ -47,7 +42,6 @@ int main() {
     }
 
     knapsack2();
-    //knapsack_recursivo(0, 0);
 
     // imprimir resposta
     int i = sum;
