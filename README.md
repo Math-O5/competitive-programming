@@ -1,9 +1,12 @@
 # COMPETITIVE_PROGRAMMING
 
-  Here are some resolutions of competitive programming. 
-  You can find questions solve in C++, C, Python, Ruby and so on. 
+  Here are some resolutions of competitive programming. I like to do this problems to improve my skills coding, distract from the dayly tasks. Note, this code is really messy up, since is done so fast.  
 
-# The most used is C++ by the followings qualities:
+#  Languages used here and why:
+## C++:
   - One of the most fast languages in TimeRunning.
-  - Easy to manage, of course, there is use of syntax sugar.
-  - The Standard Template Library (STL). 
+  - The Standard Template Library (STL)
+  
+## Python
+  - Big integers facilities
+  - Easy manage of strings
