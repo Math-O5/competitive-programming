@@ -1,52 +1,59 @@
-/* O trabalh do Papa */
-/* https://www.ime.usp.br/~cef/XVmaratona/ */
-/* dp - knapsack */
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <string.h>
 
 using namespace std;
 
+#define peso first
+#define res second
+
+const int INF = 0x3f3f3f3f;
 vector<pair<int, int>> caixas;
-vector<int> dp[1002];
-int n, a, b; // n : number packs, a and b auxiliars.
+int N, a, b, dp[2002][2002];
 
 bool mySort(pair<int, int> a, pair<int, int> b) {
-    return (a.second >= b.second)? true : false;
+    return (a.res > b.res);
 }
 
-int recursao_dp(int index, int stand) {
-    // the first row must be all zeros
-    if(index == n)
-        return 1;
-
-    int pega, nao_pega;
-    if(caixas[index].first > stand) {
-        return dp[stand][index] = recursao_dp(index + 1, stand);
+void Print() {
+    for(int i = 0; i < (int)caixas.size(); ++i) {
+        cout << caixas[i].res << ' ' << caixas[i].peso << '\n';
     }
-    return dp[stand][index] = max(1 + recursao_dp(index + 1, min(stand - caixas[index].first, caixas[index].second)), recursao_dp(index + 1, stand));
-   
 }
 
-int main() {
-
-    cin >> n;
-    for(int j = 0; j < n; ++j)
-    for(int i = 0; i < 1000005; ++i)
-    dp[j].push_back(0);
-
-    int j = n, stand = 0;
-    while(j--) {
-        cin >> a >> b;
-        if(b > a) {
-            n--;
-            continue;
+int knap() {
+    
+    memset(dp, -1, sizeof dp);
+    
+    for(int i = 0; i <= N; ++i) {
+        dp[0][i] = INF;
+    }
+    
+    // Print();
+    
+    int ans = 0;
+    for(int i = 1; i <= N; i++) {
+        for(int j = 1; j <= N; j++) {
+            // OPT(i, j) = max( pegar caixa anterior, pegar essa caixa )
+            dp[i][j] = max(dp[i][j-1], min(dp[i-1][j-1], caixas[j-1].res) - caixas[j-1].peso);
+            ans = (dp[i][j] > -1)? i : ans;
         }
-        stand = max(b, stand);
-        caixas.push_back(make_pair(a, b - a));
     }
+    return ans;
+}
 
-    sort(caixas.begin(), caixas.end(), mySort); // O (n long n )
-    cout << recursao_dp(0, stand) << '\n';
+int main()
+{
+    cin >> N;
+    for(int i = 0; i < N; ++i) {
+        cin >> a >> b;
+        caixas.push_back(make_pair(a, b));
+    }
+    
+    sort(caixas.begin(), caixas.end(),mySort);
+    
+    cout << knap() << '\n';
+
     return 0;
 }
