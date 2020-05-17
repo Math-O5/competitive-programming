@@ -34,8 +34,23 @@ int lis(int num, int i) {
     return lis(num, i + 1);
 }
 
-int lis_dp(int i) {
-
+// O (n^2)
+int lis_dp() {
+    int ans = 0;
+    
+    dp[0] = 1;
+    for(int i = 1; i < n; ++i) {
+         // the size of least increase sequence is 1
+        dp[i] = 1;
+        
+        for(int j = 0; j < i; ++j) {
+            if(numbers[i] > numbers[j]) {
+                dp[i] = max(1 + dp[j], dp[i]);
+                ans = max(ans, dp[i]);
+            }
+        }
+    }
+    return ans;
 }
 
 int main()
@@ -44,18 +59,16 @@ int main()
     cin.tie(NULL);
     
     cin >> n;
-    memset(dp, -1, sizeof dp);
     
     for(int i = 0; i < n; ++i) {
         cin >> aux;
         numbers.pb(aux);
     }
 
-    int ans = 0;
-    ans = lis(-INF, -1);
+
    
-    
-    cout << ans << '\n';
+    cout << lis_dp() << '\n';
+    cout << lis(-INF, -1) << '\n';
 
     return 0;
 }

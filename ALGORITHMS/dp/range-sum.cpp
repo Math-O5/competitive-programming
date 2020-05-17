@@ -9,6 +9,8 @@
 
 using namespace std;
 
+// If all numbers if non-negative, the max range sum is sum of all elements of A.
+// If there's a negative, it can be in range if the adjancents values ...positive + negative > 0
 int main() {
     int a, b, s;
     
@@ -25,12 +27,8 @@ int main() {
             cin >> a;
             sum += a;
             
-            ans = max(ans, sum);
-
-            // if sum decrease, then it's no belong more to maximum range sum
-            if(sum < 0) {
-                sum = 0;
-            }     
+            ans = max(ans, sum);    // storage the maximum sum
+            sum = max(0, sum);   // if sum decrease, then it's no belong more to maximum range sum
         }
         cout << ans << endl;
     }
