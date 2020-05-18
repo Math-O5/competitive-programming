@@ -38,20 +38,38 @@ Elephant elem[MAXN];
 
 int lis(int n) {
 
-    dp[0] = 1;
-    // simple lis
+    vector<vector<int>> sq(n+1);
+    //dp[0] = 1;
+    sq[0].pb(elem[0].id);
+
     for(int i = 1; i < n; ++i) {
         
         // the least peace is 1
-        dp[i] = 1;
-        
-        for(int j = 0; j < i; j++) {
-            if(elem[j].w < elem[i].w && elem[j].s > elem[i].s) dp[i] = max(dp[j] + 1, dp[i]);
+        // dp[i] = 1;
+
+        for(int j = 0; j < i; ++j) {
+            //dp[i] = max(dp[j] + 1, dp[i]);
+            if(elem[j].w < elem[i].w && elem[j].s > elem[i].s
+            && (sq[i].size() < sq[j].size() + 1)) {
+                sq[i] = sq[j];
+            }
         }
 
+        sq[i].pb(elem[i].id);
     }
+    
+    vector<int> max = sq[0]; 
+   
+    for (vector<int> x : sq) 
+        if (x.size() > max.size()) 
+            max = x; 
+    
+    n = (int)max.size();
 
-
+    cout << n << '\n';
+    for (int x : max)
+        cout << x << '\n';
+    fflush(stdout);
     return 0;
 }
 
@@ -60,7 +78,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int n = 0, a, b, i = 0;
+    int n = 0;
     while(cin >> elem[n].w >> elem[n].s) {
         elem[n].id = n + 1; 
         ++n;
