@@ -15,11 +15,10 @@ using namespace std;
 #define sd second
 #define pb push_back
 // #define mp make_pair
-#define MAXN 100001
+#define MAXN 600001
 
 const int INF = 0x3f3f3f3f;
 //priority_queue<pair<int, vector<pair<int, int>>>> elem;
-#define M 10001
 
 struct Elephant{
     int id,
@@ -28,69 +27,30 @@ struct Elephant{
 };
 
 bool mySort(const Elephant& a, const Elephant& b){
-    return (a.w != b.w)? (a.w < b.w) : (a.s > b.s);
+    if (a.w != b.w)
+        return a.w < b.w; 
+    else return a.s > b.s;
 }
 
-bitset<MAXN> dp;
+int dp[MAXN]; // the lis until i
 Elephant elem[MAXN];
 
 
 int lis(int n) {
-    vector<pair<int, int>> v;
-    vector<int> topo,   // QI
-                ans;    // subsequence of elephantes
-    vector<int>::iterator it;
-    int ultimoTopo;
 
-    /*************************/
-    // primeira iteração, inicializa topo
-
-    //cout << v[0].first << ' ' << v[0].second << endl;
-
-    // armazeno as tres informações ordenadas pelo maior peso
-    topo.pb(elem[0].s);
-    ultimoTopo = topo.back();
-    /*************************/
-
-    for(int i = n - 1; i >= 0; --i) {
-        // procuro a maior subsequencia crescente em QI
-        it = lower_bound(topo.begin(), topo.end(), elem[i].s);
-        // se o peso ainda nao foi escolhido
-        if(!dp[elem[i].w]) {
-            // crio uma nova pilha se o elemnto eh maior que o topo das anteriores
-             if(it == topo.end()) {
-                 dp[elem[i].w] = 1; // marco o peso como escolhido
-                 ans.pb(topo.back()); // o topo da ultima pilha faz parte da subsequencia
-                 topo.pb(elem[i].s); // topo da nova pilha
-                 ultimoTopo = elem[i].s; // o ultimo elemento da sequencia 
-             } else {
-                 *it = elem[i].s; // atualizo topo
-             }
+    dp[0] = 1;
+    // simple lis
+    for(int i = 1; i < n; ++i) {
+        
+        // the least peace is 1
+        dp[i] = 1;
+        
+        for(int j = 0; j < i; j++) {
+            if(elem[j].w < elem[i].w && elem[j].s > elem[i].s) dp[i] = max(dp[j] + 1, dp[i]);
         }
 
     }
 
-    // ultima iteração, atualiza resposta
-    ans.pb(ultimoTopo);
-
-    //reverse(ans.begin(), ans.end());
-    
-    // o tamanho da sequencia é
-    cout << (int)topo.size() << endl;
-
-    // a sequencia é
-    int i = 0; 
-    while(ans.size()) {
-        int qi = ans.back();
-        while(i < n) {
-            if(elem[i].s == qi) {
-                cout << elem[i].id << endl;
-                break;
-            }
-            ++i;
-        }
-        ans.pop_back();
-    }
 
     return 0;
 }
@@ -105,7 +65,7 @@ int main()
         elem[n].id = n + 1; 
         ++n;
     }
-
+    sort(elem, elem + n, mySort);
     lis(n);
 
     return 0;
