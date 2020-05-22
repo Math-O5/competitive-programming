@@ -30,12 +30,17 @@
           <li><a href="OBI/2014/letra.cpp">[1]</a> OBI 2014 Letra - (DP - LIS)</li>
           <li><a href="UVA/p10543.cpp">[1]</a> UVA 10534 - Wavio Sequence (DP - LIS)</li>
           <li><a href="OBI/2007/pizza.cpp">[1]</a> OBI 2007 Pizza - (DP - Sum Range)</li>
-          <li><a href="UVA/10131-is-bigger-smarter.cpp">[1] O(n²)</a> <li><a href="UV/10131-is-bigger-smarter2.cpp">[2] O(n log n)</a>  UVA 10131 is bigger smarter?- (DP - Knapsack)</li>
+          <li><a href="UVA/10131-is-bigger-smarter.cpp">[1] O(n²)</a><a href="UV/10131-is-bigger-smarter2.cpp">[2] O(n log n)</a>  UVA 10131 is bigger smarter?- (DP - Knapsack)</li>
       </ul>
     </li>
      <h2>Graph</h2>
       <ul>
         <li><a href="ALGORITHMS/graph/union-find.cpp" target="_blank">[1]</a>Union Find</li>
+        <li><a href="ALGORITHMS/graph/dfs.cpp" target="_blank">[1]</a>DFS (Deep First Search)</li>
+        <li><a href="ALGORITHMS/graph/bfs.cpp" target="_blank">[1]</a>BFS (Breadth First Search)</li>
+        <li><a href="ALGORITHMS/graph/dijkstra.cpp" target="_blank">[1]</a>Dijkstra</li>
+        <li><a href="ALGORITHMS/graph/prim.cpp" target="_blank">[1]</a>Prim's Algorithm</li>
+        <li><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[1]</a><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[2]</a>MST (Minimum spanning  - Kruskal)</li>
       </ul>
       <h2>Pratice</h2>
       <ul>
