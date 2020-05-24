@@ -2,13 +2,6 @@
 
   Here are some resolutions of competitive programming. I like to do this problems to improve my skills coding, distract from the dayly tasks. Note, this code is really messy up, since is done so fast.  
 
-#  Languages used here and why:
-## C++:
-  - One of the most fast languages in TimeRunning.
-  - The Standard Template Library (STL). 
-## Python:
-  - Big integers
-
 # Algorithms
 <p>My implementations:</p>
 <ul>
@@ -45,7 +38,6 @@
       <h2>Pratice</h2>
       <ul>
           <li><a href="OBI/2010/fusões.cpp">[1]</a><a href="OTHERS/guildas.cpp">[2]</a> OBI Fusões - Guildas (Graph - Union Find)</li>
-          <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>
-          
+          <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>   
       </ul>
 </ul>
