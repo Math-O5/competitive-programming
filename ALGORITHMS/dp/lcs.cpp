@@ -53,11 +53,11 @@ int lcs_iterative(int n, int m) {
             if(i == 0 || j == 0)  
                 dp[i][j] = 0;  
       
-        else if(seqA[i - 1] == seqB[j - 1])  
-            dp[i][j] = 1 + dp[i - 1][j - 1];  
-      
-        else
-            dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);  
+            else if(seqA[i - 1] == seqB[j - 1])  
+                dp[i][j] = 1 + dp[i - 1][j - 1];  
+        
+            else
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);  
         }  
     }  
           
