@@ -1,21 +1,21 @@
-# COMPETITIVE_PROGRAMMING
+# CP - COMPETITIVE_PROGRAMMING
 
-  Here are some resolutions of competitive programming. I like to do this problems to improve my skills coding, distract from the dayly tasks. Note, this code is really messy up, since is done so fast.  
+  Here are some resolutions of competitive programming. I like to do this problems to improve my skills coding, distract from the dayly tasks. Note, this code is really messy up, since is done only to be 'accepted".  
 
 # Algorithms
 <p>My implementations:</p>
+<p>The link to the problem is commented insede the codes</p>
 <ul>
     <li>
-    <a href="https://en.wikipedia.org/wiki/Dynamic_programming" target="_blank">Programming Dinami - <h2>DP</h2></a>
+      <h2>DP - <a href="https://en.wikipedia.org/wiki/Dynamic_programming" target="_blank">Programming Dinamic</a></h2>
       <ul>
-        <li><a href="ALGORITHMS/dp/range-sum.cpp" target="_blank">[1]</a>Range Sum</li>
-        <li><a href="ALGORITHMS/dp/lis-dp.cpp" target="_blank">[1]</a> <a href="ALGORITHMS/dp/lis-bs.cpp">[2]</a>Longest Increase Sequence</li>
-        <li><a href="ALGORITHMS/dp/wisp-dp.cpp" target="_blank">[1]</a>Weithed Interval Schedule Problem</li>
-        <li><a href="ALGORITHMS/dp/wssp-dp.cpp" target="_blank">[1]</a>Knapsack</li>
-        <li><a href="ALGORITHMS/dp/coin-dp.cpp" target="_blank">[1]</a>Coin Change</li>
+        <li><a href="ALGORITHMS/dp/range-sum.cpp" target="_blank">[1]</a> Range Sum</li>
+        <li><a href="ALGORITHMS/dp/lis-dp.cpp" target="_blank">[1]</a> <a href="ALGORITHMS/dp/lis-bs.cpp">[2]</a> Longest Increase Sequence</li>
+        <li><a href="ALGORITHMS/dp/wisp-dp.cpp" target="_blank">[1]</a> Weithed Interval Schedule Problem</li>
+        <li><a href="ALGORITHMS/dp/wssp-dp.cpp" target="_blank">[1]</a> Knapsack</li>
+        <li><a href="ALGORITHMS/dp/coin-dp.cpp" target="_blank">[1]</a> Coin Change</li>
       </ul>
-      <h2>Pratice</h2>
-      <p>The link to the problem is commented insede the codes</p>
+      <h2>Pratice DP</h2>
       <ul>
           <li><a href="OTHERS/meu-troco.cpp">[1]</a><a href="OTHERS/meu-troco2.cpp">[2]</a><a href="OTHERS/meu-troco3.cpp">[3]</a> Véi, dá meu troco! - (DP - Coins)</li>
           <li><a href="OBI/2015/banco-inteligente.cpp">[1]</a><a href="UVA/357-let-count-the-ways.cpp">[2]</a> Formas de me dar meu dinheiro! (ways to count) (DP - Coin)</li>
@@ -36,9 +36,25 @@
         <li><a href="ALGORITHMS/graph/prim.cpp" target="_blank">[1]</a> Prim's Algorithm</li>
         <li><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[1]</a><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[2]</a> MST (Minimum spanning  - Kruskal)</li>
       </ul>
-      <h2>Pratice</h2>
+      <h2>Pratice Graphs</h2>
       <ul>
           <li><a href="OBI/2010/fusões.cpp">[1]</a><a href="OTHERS/guildas.cpp">[2]</a> OBI Fusões - Guildas (Graph - Union Find)</li>
           <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>   
       </ul>
+    <li>
+      <h2>DATA STRUCTURE</h2>
+      <ul>
+        <li><a href="ALGORITHMS/struct/stl-1.md" target="_blank">[1]</a> STL 1 (vector, queue, stack, pair)</li>
+        <li><a href="ALGORITHMS/struct/stl-2.md" target="_blank">[1]</a> STL 1 (vector, queue, stack, pair)</li>
+        <li><a href="ALGORITHMS/struct/stl-3.md" target="_blank">[1]</a> STL 1 (vector, queue, stack, pair)</li>
+        <li><a href="ALGORITHMS/struct/bs.md" target="_blank">[1]</a> Binary Search Tree</li>
+        <li><a href="ALGORITHMS/struct/segTree.cpp" target="_blank">[1]</a> Segmented tree (seg Tree)</li>
+      </ul>
+      <h2>Pratice</h2>
+      <ul>
+        <li><a href="UVA/p540_team_queue.cpp" target="_blank">[1]</a> UVA 540 Team Queue (Map)</li>
+        <li><a href="UVA/p837.cpp" target="_blank">[1]</a> UVA 837 Light and Transparencies (Map, Set)</li>
+        <li><a href="OBI/2012/banco.cpp" target="_blank">[1]</a> OBI Banco (Priority Queue)</li>
+      </ul>
+    </li>
 </ul>
