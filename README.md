@@ -55,6 +55,7 @@
         <li><a href="UVA/p540_team_queue.cpp" target="_blank">[1]</a> UVA 540 Team Queue (Map)</li>
         <li><a href="UVA/p837.cpp" target="_blank">[1]</a> UVA 837 Light and Transparencies (Map, Set)</li>
         <li><a href="OBI/2012/banco.cpp" target="_blank">[1]</a> OBI Banco (Priority Queue)</li>
+        <li><a href="OBI/2012/soma-de-casas-2.cpp" target="_blank">[1]U(n log n)</a> OBI Banco (Binary Search)</li>
       </ul>
     </li>
 </ul>

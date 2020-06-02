@@ -1,3 +1,5 @@
+// problem:
+// https://olimpiada.ic.unicamp.br/pratique/p2/2012/f2/soma/
 #include <stdio.h>
 
 
