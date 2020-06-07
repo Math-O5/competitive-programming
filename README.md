@@ -25,6 +25,7 @@
           <li><a href="OBI/2007/pizza.cpp">[1]</a> OBI 2007 Pizza - (DP - Sum Range)</li>
           <li><a href="UVA/10131-is-bigger-smarter.cpp">[1] O(n²)</a><a href="UVA/10131-is-bigger-smarter2.cpp">[2] O(n log n)</a> UVA 10131 is bigger smarter?- (DP - LIS)</li>
           <li><a href="OTHERS/DNA-Sequence-Alignment.cpp">[1] O(n*m)</a> DNA Sequence Alignment (DP - String)</li>
+          <li><a href="UVA/10616-divisible.cpp">[1] O(n²)</a>UVA 10616 Sum Divisble by n chosen m - (DP - Knapsack)</li>
       </ul>
     </li>
      <h2>Graph</h2>
