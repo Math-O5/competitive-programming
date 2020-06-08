@@ -26,6 +26,10 @@ int n, m, start;
 vector<edge> Edge;
 
 
+/**  
+ *  source: https://cp-algorithms.com/graph/bellman_ford.html
+ * 
+ */
 void bellmanFord() {
     vector<int> distance (n, INF);
 
@@ -38,8 +42,7 @@ void bellmanFord() {
         for(int j = 0; j < m;++j) {
 
             // if this vertice is reachble 
-            if(distance[ Edge[j].from ] < INF) {
-                
+            if(distance[ Edge[j].from ] < INF) {              
                 distance[ Edge[j].to ] = min( distance[ Edge[j].to ], distance[ Edge[j].from] + Edge[j].value );
             }
         }
