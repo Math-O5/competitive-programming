@@ -36,11 +36,13 @@
         <li><a href="ALGORITHMS/graph/dijkstra.cpp" target="_blank">[1]</a> Dijkstra</li>
         <li><a href="ALGORITHMS/graph/prim.cpp" target="_blank">[1]</a> Prim's Algorithm</li>
         <li><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[1]</a><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[2]</a> MST (Minimum spanning  - Kruskal)</li>
+        <li><a href="ALGORITHMS/graph/ordenacao-topologica.cpp" target="_blank">[BFS]</a><a href="ALGORITHMS/graph/ordenacao-topologica-2.cpp" target="_blank">[DFS]</a> versão da Ordenação Topologica (Top Sorting)</li>
       </ul>
       <h2>Pratice Graphs</h2>
       <ul>
           <li><a href="OBI/2010/fusões.cpp">[1]</a><a href="OTHERS/guildas.cpp">[2]</a> OBI Fusões - Guildas (Graph - Union Find)</li>
-          <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>   
+          <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>
+          <li><a href="OBI/2011/escalonamento.cpp">[1] O(|V| + |E|)</a> OBI 2011 - Escalonamento Ótimo (Graph - Ordenação Topológica)</li>   
       </ul>
     <li>
       <h2>DATA STRUCTURE</h2>
