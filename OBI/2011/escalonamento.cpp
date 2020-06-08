@@ -13,22 +13,13 @@ using namespace std;
 #define pb push_back
 #define MAXN 50010
 
-const int INF = 0x3f3f3f3f;
 
-int component[MAXN], grau[MAXN];
-vector<int> grafo[MAXN],
-            list;
+int grau[MAXN];
+vector<int> grafo[MAXN];
 
-void dfs(int v) {
-    for(int i = 0; i < (int)grafo[v].size(); ++i) {
-        int u = grafo[v][i];
-        grau[u]--;
-        if(grau[u] == 0) {
-            list.pb(u);
-            dfs(u);
-        }
-    }
-}
+// it's necessary because after remove a conection between two vertices, 
+// it can come before an already taken vertice. 
+priority_queue<int, vector<int>, greater<int>> list; 
 
 int main()
 {
@@ -36,8 +27,6 @@ int main()
     cin.tie(NULL);
     
     int n, m, a, b;
-
-    //memset(component, -1, sizeof component);
 
     cin >> n >> m;
 
@@ -49,28 +38,27 @@ int main()
 
     for(int i = 0; i < n; ++i) {
         if(!grau[i]) {
-            list.pb(i);
+            list.push(i);
         }
     }
 
-    // for(auto i: list) 
-    //     dfs(i);
-
     int ini = 0;
-    while(ini < (int)list.size()) {
-        int atual = list[ini++];
+    vector<int> ans;
+    while(!list.empty()) {
+        int atual = list.top();
+        list.pop();
 
         for(int i = 0; i < (int)grafo[atual].size(); ++i) {
             int u  = grafo[atual][i];
             grau[u]--;
             if(!grau[u]) 
-                list.pb(u);
+                list.push(u);
         }
-
+        ans.pb(atual);
     }
 
-    if((int)list.size() == n) {
-        for(auto i: list) 
+    if((int)ans.size() == n) {
+        for(auto i: ans) 
             cout << i << endl;
     } else {
         cout << "*" << endl;
