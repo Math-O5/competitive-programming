@@ -41,6 +41,7 @@
       <h2>Pratice Graphs</h2>
       <ul>
           <li><a href="OBI/2010/fusões.cpp">[1]</a><a href="OTHERS/guildas.cpp">[2]</a> OBI Fusões - Guildas (Graph - Union Find)</li>
+          <li><a href="CODEFORCES/c-new-distribution.cpp">[1]</a> CODEFORCES 69 - C - new Distribution (Graph - DFS or Union Find)</li>
           <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>
           <li><a href="OBI/2011/escalonamento.cpp">[1] O(|V| + |E|)</a> OBI 2011 - Escalonamento Ótimo (Graph - Ordenação Topológica)</li>   
       </ul>

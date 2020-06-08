@@ -8,7 +8,7 @@ const int INF = 0x3f3f3f3f;
 using namespace std;
 
 int n,
-     m, 
+    m, 
     processados[MAX],
     distancia[MAX];     // distance from infinity
 vector<int> vizinhos[MAX], edge[MAX];
