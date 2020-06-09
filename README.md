@@ -17,18 +17,18 @@
       </ul>
       <h2>Pratice DP</h2>
       <ul>
-          <li><a href="OTHERS/meu-troco.cpp">[1] </a><a href="OTHERS/meu-troco2.cpp">[2]</a><a href="OTHERS/meu-troco3.cpp">[3]</a> Véi, dá meu troco! - (DP - Coins)</li>
+          <li><a href="OTHERS/meu-troco.cpp">[1] </a><a href="OTHERS/meu-troco2.cpp">[2]</a><a href="OTHERS/meu-troco3.cpp"> [3]</a> Véi, dá meu troco! - (DP - Coins)</li>
           <li><a href="OBI/2015/banco-inteligente.cpp">[1]</a><a href="UVA/357-let-count-the-ways.cpp">[2]</a> Formas de me dar meu dinheiro! (ways to count) (DP - Coin)</li>
           <li><a href="UVA/p507.cpp">[1]</a> UVA 507 Jill Rides Again - (DP - Sum Range)</li>
-          <li><a href="OBI/2014/letra.cpp">[1]</a> OBI 2014 Letra - (DP - LIS)</li>
+          <li><a href="OBI/2014/letra.cpp ">[1]</a> OBI 2014 Letra - (DP - LIS)</li>
           <li><a href="UVA/p10543.cpp">[1]</a> UVA 10534 - Wavio Sequence (DP - LIS)</li>
           <li><a href="OBI/2007/pizza.cpp">[1]</a> OBI 2007 Pizza - (DP - Sum Range)</li>
-          <li><a href="UVA/10131-is-bigger-smarter.cpp">[1] O(n²) </a><a href="UVA/10131-is-bigger-smarter2.cpp">[2] O(n log n)</a> UVA 10131 is bigger smarter?- (DP - LIS)</li>
+          <li><a href="UVA/10131-is-bigger-smarter.cpp">[1] O(n²) - </a><a href="UVA/10131-is-bigger-smarter2.cpp">[2] O(n log n)</a> UVA 10131 is bigger smarter?- (DP - LIS)</li>
           <li><a href="OTHERS/DNA-Sequence-Alignment.cpp">[1] O(n*m)</a> DNA Sequence Alignment (DP - String)</li>
-          <li><a href="UVA/10616-divisible.cpp">[1] O(n²)</a>UVA 10616 Sum Divisble by n chosen m - (DP - Knapsack)</li>
+          <li><a href="UVA/10616-divisible.cpp">[1] O(n²)</a> UVA 10616 Sum Divisble by n chosen m - (DP - Knapsack)</li>
       </ul>
     </li>
-     <h2>Graph</h2>
+     <h2>Graph - <a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Fundamentals_of_data_structures/Graphs" target="_blank">Programming Dinamic</a></h2>
       <ul>
         <li><a href="ALGORITHMS/graph/union-find.cpp" target="_blank">[1]</a> Union Find</li>
         <li><a href="ALGORITHMS/graph/dfs.cpp" target="_blank">[1]</a> DFS (Deep First Search)</li>
@@ -36,8 +36,8 @@
         <li><a href="ALGORITHMS/graph/dijkstra.cpp" target="_blank">[1]</a> Dijkstra</li>
         <li><a href="ALGORITHMS/graph/prim.cpp" target="_blank">[1]</a> Prim's Algorithm</li>
         <li><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[1]</a><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[2]</a> MST (Minimum spanning  - Kruskal)</li>
-        <li><a href="ALGORITHMS/graph/ordenacao-topologica.cpp" target="_blank">[BFS]</a><a href="ALGORITHMS/graph/ordenacao-topologica-2.cpp" target="_blank">[DFS]</a> versão da Ordenação Topologica (Top Sorting)</li>
-        <li><a href="ALGORITHMS/graph/bellman-ford.cpp" target="_blank">[O(|V|*|E|)]</a>Bellforman Ford (Min Path)</li>
+        <li><a href="ALGORITHMS/graph/ordenacao-topologica.cpp" target="_blank">[BFS] </a><a href="ALGORITHMS/graph/ordenacao-topologica-2.cpp" target="_blank">[DFS]</a> versão da Ordenação Topologica (Top Sorting)</li>
+        <li><a href="ALGORITHMS/graph/bellman-ford.cpp" target="_blank">[1] O(|V| * |E|) -</a> Bellforman Ford (Min Path)</li>
       </ul>
       <h2>Pratice Graphs</h2>
       <ul>
@@ -45,7 +45,7 @@
           <li><a href="CODEFORCES/c-new-distribution.cpp">[1]</a> CODEFORCES 69 - C - new Distribution (Graph - DFS or Union Find)</li>
           <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>
           <li><a href="OBI/2011/escalonamento.cpp">[1] O(|V| + |E|)</a> OBI 2011 - Escalonamento Ótimo (Graph - Ordenação Topológica)</li>
-          <li><a href="UVA/558-Wormholes.cpp">[1] O(|V| + |E|)</a> UVA 558 - Wormholes (Graph - Negative Cycles)</li>  
+          <li><a href="UVA/558-Wormholes.cpp">[1] O(|V| * |E|)</a> UVA 558 - Wormholes (Graph - Negative Cycles)</li>  
       </ul>
     <li>
       <h2>DATA STRUCTURE</h2>
