@@ -18,7 +18,8 @@ int knapsack() {
             if(carta[i-1].peso > j) {
                 dp[i][j] = dp[i-1][j];
             } else {
-                dp[i][j] = max(dp[i-1][j], carta[i-1].value + dp[i-1][j - carta[i-1].peso]);
+                dp[i][j] = max(dp[i-1][j], 
+                               dp[i-1][j - carta[i-1].peso] + carta[i-1].value);
             }
         }
     }     

@@ -25,10 +25,11 @@
           <li><a href="OBI/2007/pizza.cpp">[1]</a> OBI 2007 Pizza - (DP - Sum Range)</li>
           <li><a href="UVA/10131-is-bigger-smarter.cpp">[1] O(n²) - </a><a href="UVA/10131-is-bigger-smarter2.cpp">[2] O(n log n)</a> UVA 10131 is bigger smarter?- (DP - LIS)</li>
           <li><a href="OTHERS/DNA-Sequence-Alignment.cpp">[1] O(n*m)</a> DNA Sequence Alignment (DP - String)</li>
+          <li><a href="OBI/2005/pedido_de_desculpas.cpp">[1] O(n²)</a> OBI 2005 Pedido de desculpas - (DP - Knapsack)</li>
           <li><a href="UVA/10616-divisible.cpp">[1] O(n²)</a> UVA 10616 Sum Divisble by n chosen m - (DP - Knapsack)</li>
       </ul>
     </li>
-     <h2>Graph - <a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Fundamentals_of_data_structures/Graphs" target="_blank">Programming Dinamic</a></h2>
+     <h2>Graph - <a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Fundamentals_of_data_structures/Graphs" target="_blank">Graph in CP (Grafos)</a></h2>
       <ul>
         <li><a href="ALGORITHMS/graph/union-find.cpp" target="_blank">[1]</a> Union Find</li>
         <li><a href="ALGORITHMS/graph/dfs.cpp" target="_blank">[1]</a> DFS (Deep First Search)</li>
@@ -38,6 +39,7 @@
         <li><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[1]</a><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[2]</a> MST (Minimum spanning  - Kruskal)</li>
         <li><a href="ALGORITHMS/graph/ordenacao-topologica.cpp" target="_blank">[BFS] </a><a href="ALGORITHMS/graph/ordenacao-topologica-2.cpp" target="_blank">[DFS]</a> versão da Ordenação Topologica (Top Sorting)</li>
         <li><a href="ALGORITHMS/graph/bellman-ford.cpp" target="_blank">[1] O(|V| * |E|) -</a> Bellforman Ford (Min Path)</li>
+        <li><a href="ALGORITHMS/graph/bipartite.cpp" target="_blank">[1] O(|V| * |E|) -</a> Check Graph Bipartite (BFS/DFS)</li>
       </ul>
       <h2>Pratice Graphs</h2>
       <ul>
@@ -47,6 +49,12 @@
           <li><a href="OBI/2011/escalonamento.cpp">[1] O(|V| + |E|)</a> OBI 2011 - Escalonamento Ótimo (Graph - Ordenação Topológica)</li>
           <li><a href="UVA/558-Wormholes.cpp">[1] O(|V| * |E|)</a> UVA 558 - Wormholes (Graph - Negative Cycles)</li>  
       </ul>
+    <li>
+      <h2>Greedy Problems</h2>
+      <ul>
+        <li><a href="OBI/2010/dentista_1.cpp">[1] O(N logn N) - [2] O(N) </a> OBI 2010 Dentista (Intervel schedule)</li>
+      </ul>
+    </li>
     <li>
       <h2>DATA STRUCTURE</h2>
       <ul>
@@ -61,7 +69,7 @@
         <li><a href="UVA/p540_team_queue.cpp" target="_blank">[1]</a> UVA 540 Team Queue (Map)</li>
         <li><a href="UVA/p837.cpp" target="_blank">[1]</a> UVA 837 Light and Transparencies (Map, Set)</li>
         <li><a href="OBI/2012/banco.cpp" target="_blank">[1]</a> OBI Banco (Priority Queue)</li>
-        <li><a href="OBI/2012/soma-de-casas-2.cpp" target="_blank">[1]U(n log n)</a> OBI Banco (Binary Search)</li>
+        <li><a href="OBI/2012/soma-de-casas-2.cpp" target="_blank">[1] U(n log n)</a> OBI Banco (Binary Search)</li>
       </ul>
     </li>
 </ul>

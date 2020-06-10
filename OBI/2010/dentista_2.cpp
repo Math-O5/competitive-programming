@@ -2,26 +2,41 @@
 #include <algorithm>
 using namespace std;
 
-struct consultas {
-       int ini, fim;
+struct consulta {
+   int ini, 
+       fim;
 };
-int main () {
- int n, cont=1;
- cin >> n;
- consultas x[n];
- for(int i=0;i<n;++i) {
-     cin >> x[i].ini >> x[i].fim;
- }
- for(int i=0;i<n-1;++i) {
-     if(x[i].fim>x[i+1].ini){
-        if(x[i].fim>x[i+1].fim) {
-           continue;
-        } else x[i+1]= x[i];
-     } else cont++;
 
-//   sort(todos, todos+n, comp);
-//  for(int i=n-1;i>=0;--i) {
- }
-  cout << cont;
+bool compare (const consulta& a, const consulta& b) {
+   return (a.ini < b.ini);
+}
+
+int main () {
+   int n, count = 0;
+   cin >> n;
+   
+   consulta x[n];
+   
+   for(int i = 0;i < n; ++i) {
+      cin >> x[i].ini >> x[i].fim;  
+   }
+
+   sort(x, x + n + 1, compare);
+
+   count = 1;
+   int takenFim = x[0].fim;
+
+   for(int i = 1;i < n; ++i) {
+      
+      // pode pegar
+      if(takenFim <= x[i].ini) {
+         count++;
+         takenFim = max(takenFim, x[i].fim);
+      } else if(takenFim > x[i].ini) {
+         // troco por uma que gere menos conflito
+         takenFim = min(x[i].fim, takenFim);
+      }
+   }
+   cout << count;
 return 0;
 }

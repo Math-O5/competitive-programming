@@ -5,10 +5,6 @@ using namespace std;
 struct consultas {
        int ini, fim;
 };
-int comp(consultas A, consultas B) {
-    if(A.fim < B.fim) return 1;
-    else return 1;
-}
 
 int main () {
  int n, cont=1;
@@ -23,9 +19,6 @@ int main () {
            continue;
         } else x[i+1]= x[i];
      } else cont++;
-
-//   sort(todos, todos+n, comp);
-//  for(int i=n-1;i>=0;--i) {
  }
   cout << cont;
 return 0;
