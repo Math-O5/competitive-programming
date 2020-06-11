@@ -47,12 +47,14 @@
           <li><a href="CODEFORCES/c-new-distribution.cpp">[1]</a> CODEFORCES 69 - C - new Distribution (Graph - DFS or Union Find)</li>
           <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>
           <li><a href="OBI/2011/escalonamento.cpp">[1] O(|V| + |E|)</a> OBI 2011 - Escalonamento Ótimo (Graph - Ordenação Topológica)</li>
-          <li><a href="UVA/558-Wormholes.cpp">[1] O(|V| * |E|)</a> UVA 558 - Wormholes (Graph - Negative Cycles)</li>  
+          <li><a href="UVA/558-Wormholes.cpp">[1] O(|V| * |E|)</a> UVA 558 - Wormholes (Graph - Negative Cycles)</li>
+           <li><a href="CODEFORCES/div3/617-E-graph.cpp">[1] </a> CODEFORCES 617 - E - String Coloring, Easy Version (Graph - Bipartite)</li>  
       </ul>
     <li>
       <h2>Greedy Problems</h2>
       <ul>
         <li><a href="OBI/2010/dentista_1.cpp">[1] O(N logn N) - [2] O(N) </a> OBI 2010 Dentista (Intervel schedule)</li>
+        <li><a href="CODEFORCES/div3/617-E-greedy.cpp">[1] </a> CODEFORCES 617 - E - String Coloring, Easy Version (Greedy Solution)</li>  
       </ul>
     </li>
     <li>
