@@ -4,7 +4,7 @@
 
 # Algorithms
 <p>My implementations:</p>
-<p>The link to the problem is commented insede the codes</p>
+<p>The link of the problems is commented first line of each code</p>
 <ul>
     <li>
       <h2>DP - <a href="https://en.wikipedia.org/wiki/Dynamic_programming" target="_blank">Programming Dinamic</a></h2>
@@ -29,17 +29,19 @@
           <li><a href="UVA/10616-divisible.cpp">[1] O(n²)</a> UVA 10616 Sum Divisble by n chosen m - (DP - Knapsack)</li>
       </ul>
     </li>
+    <li>
      <h2>Graph - <a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Fundamentals_of_data_structures/Graphs" target="_blank">Graph in CP (Grafos)</a></h2>
       <ul>
-        <li><a href="ALGORITHMS/graph/union-find.cpp" target="_blank">[1]</a> Union Find</li>
+        <li><a href="ALGORITHMS/graph/union-find.cpp" target="_blank">[1]</a> Union Find (DSU)</li>
         <li><a href="ALGORITHMS/graph/dfs.cpp" target="_blank">[1]</a> DFS (Deep First Search)</li>
         <li><a href="ALGORITHMS/graph/bfs.cpp" target="_blank">[1]</a> BFS (Breadth First Search)</li>
         <li><a href="ALGORITHMS/graph/dijkstra.cpp" target="_blank">[1]</a> Dijkstra</li>
         <li><a href="ALGORITHMS/graph/prim.cpp" target="_blank">[1]</a> Prim's Algorithm</li>
-        <li><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[1]</a><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[2]</a> MST (Minimum spanning  - Kruskal)</li>
+        <li><a href="ALGORITHMS/graph/kruskal.cpp" target="_blank">[1] O(M log N) - </a><a href="ALGORITHMS/graph/mst_fast_one.cpp" target="_blank">[2]</a> MST (Minimum spanning  - Kruskal)</li>
         <li><a href="ALGORITHMS/graph/ordenacao-topologica.cpp" target="_blank">[BFS] </a><a href="ALGORITHMS/graph/ordenacao-topologica-2.cpp" target="_blank">[DFS]</a> versão da Ordenação Topologica (Top Sorting)</li>
         <li><a href="ALGORITHMS/graph/bellman-ford.cpp" target="_blank">[1] O(|V| * |E|) -</a> Bellforman Ford (Min Path)</li>
         <li><a href="ALGORITHMS/graph/bipartite.cpp" target="_blank">[1] O(|V| * |E|) -</a> Check Graph Bipartite (BFS/DFS)</li>
+        <li><a href="ALGORITHMS/graph/floyd-warshal.cpp" target="_blank">[1] O(N³) -</a> Floyd-Warshall (Min Path to all vertices)</li>
       </ul>
       <h2>Pratice Graphs</h2>
       <ul>
@@ -47,9 +49,11 @@
           <li><a href="CODEFORCES/c-new-distribution.cpp">[1]</a> CODEFORCES 69 - C - new Distribution (Graph - DFS or Union Find)</li>
           <li><a href="OBI/2016/taco_do_saci.cpp">[1]</a> OBI 2016 - Taco do Saci (Graph - DFS)</li>
           <li><a href="OBI/2011/escalonamento.cpp">[1] O(|V| + |E|)</a> OBI 2011 - Escalonamento Ótimo (Graph - Ordenação Topológica)</li>
+          <li><a href="OBI/2014/copa-do-mundo.cpp">[1] O(|M| log |N|)</a> OBI - Copa do Mundo 2014 (Kruskal - MST)</li>
           <li><a href="UVA/558-Wormholes.cpp">[1] O(|V| * |E|)</a> UVA 558 - Wormholes (Graph - Negative Cycles)</li>
-           <li><a href="CODEFORCES/div3/617-E-graph.cpp">[1] </a> CODEFORCES 617 - E - String Coloring, Easy Version (Graph - Bipartite)</li>  
+          <li><a href="CODEFORCES/div3/617-E-graph.cpp">[1] </a> CODEFORCES 617 - E - String Coloring, Easy Version (Graph - Bipartite)</li>  
       </ul>
+    </li>
     <li>
       <h2>Greedy Problems</h2>
       <ul>

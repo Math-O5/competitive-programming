@@ -12,7 +12,7 @@ int main()
    
    for(int i = 1; m != 0; ++i)
    {
-       cout << "Teste" << " " << i << "\n";
+      cout << "Teste" << " " << i << "\n";
       res = 1;
       for(int j = 1; j <= m;++j)
       {
@@ -21,7 +21,6 @@ int main()
       
        
        cout << res -1  << "\n" << "\n";
-       
        
        cin >> m;
        

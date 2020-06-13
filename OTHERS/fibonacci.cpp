@@ -8,8 +8,8 @@ using namespace std;
 
 int fibonacci(int n) { //3 //2 //1
     int fib[n];
-    if(n==0) return fib[0]=1;
-    if(n==1) return fib[1]=1;
+    if(n==0) return fib[0] = 1;
+    if(n==1) return fib[1] = 1;
 
     return fibonacci(n-1) + fibonacci(n-2);
 }

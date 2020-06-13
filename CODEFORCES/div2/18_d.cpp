@@ -121,6 +121,7 @@ Bigint operator * (Bigint a, int b) {
 Bigint operator + (Bigint a, int b) {
     return a + Integer(b);
 }
+
 void Print(Bigint a) {
     Set(a);
     cout << (a.size() == 0) ? 0 : a.back();
