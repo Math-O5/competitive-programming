@@ -70,8 +70,9 @@
         <li><a href="ALGORITHMS/struct/bs.md" target="_blank">[1]</a> Binary Search Tree</li>
         <li><a href="ALGORITHMS/struct/segTree.cpp" target="_blank">[1]</a> Segmented tree (seg Tree)</li>
       </ul>
-      <h2>Pratice</h2>
+      <h2>Pratice Basis</h2>
       <ul>
+        <li><a href="OBI/2016/times.cpp">[1]</a> OBI 2016 - Times (Vectors and Pairs)</li>
         <li><a href="UVA/p540_team_queue.cpp" target="_blank">[1]</a> UVA 540 Team Queue (Map)</li>
         <li><a href="UVA/p837.cpp" target="_blank">[1]</a> UVA 837 Light and Transparencies (Map, Set)</li>
         <li><a href="OBI/2012/banco.cpp" target="_blank">[1]</a> OBI Banco (Priority Queue)</li>
