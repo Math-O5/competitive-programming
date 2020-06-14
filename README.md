@@ -65,14 +65,15 @@
       <h2>DATA STRUCTURE</h2>
       <ul>
         <li><a href="ALGORITHMS/struct/stl-1.md" target="_blank">[1]</a> STL 1 (vector, queue, stack, pair)</li>
-        <li><a href="ALGORITHMS/struct/stl-2.md" target="_blank">[1]</a> STL 1 (vector, queue, stack, pair)</li>
-        <li><a href="ALGORITHMS/struct/stl-3.md" target="_blank">[1]</a> STL 1 (vector, queue, stack, pair)</li>
+        <li><a href="ALGORITHMS/struct/stl-2.md" target="_blank">[1]</a> STL 2 (map, set, tree)</li>
+        <li><a href="ALGORITHMS/struct/bits-1.md" target="_blank">[1]</a><a href="ALGORITHMS/struct/bits-2.md" target="_blank"> [2]</a> Bits (Bits)</li>
         <li><a href="ALGORITHMS/struct/bs.md" target="_blank">[1]</a> Binary Search Tree</li>
         <li><a href="ALGORITHMS/struct/segTree.cpp" target="_blank">[1]</a> Segmented tree (seg Tree)</li>
       </ul>
-      <h2>Pratice Basis</h2>
+      <h2>Pratice</h2>
       <ul>
         <li><a href="OBI/2016/times.cpp">[1]</a> OBI 2016 - Times (Vectors and Pairs)</li>
+        <li><a href="OBI/2014/fila.cpp">[1]</a> OBI 2014 - Fila (Bits)</li>
         <li><a href="UVA/p540_team_queue.cpp" target="_blank">[1]</a> UVA 540 Team Queue (Map)</li>
         <li><a href="UVA/p837.cpp" target="_blank">[1]</a> UVA 837 Light and Transparencies (Map, Set)</li>
         <li><a href="OBI/2012/banco.cpp" target="_blank">[1]</a> OBI Banco (Priority Queue)</li>
