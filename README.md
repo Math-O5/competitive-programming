@@ -3,7 +3,7 @@
   Here are some resolutions of competitive programming. I like to do this problems to improve my skills coding, distract from the dayly tasks. Note, this code is really messy up, since is done only to be 'accepted".  
 
 # Algorithms
-<p>My implementations:</p>
+<p>My implementations / solutions:</p>
 <p>The link of the problems is commented first line of each code</p>
 <ul>
     <li>
@@ -52,6 +52,7 @@
           <li><a href="OBI/2014/copa-do-mundo.cpp">[1] O(|M| log |N|)</a> OBI - Copa do Mundo 2014 (Kruskal - MST)</li>
           <li><a href="UVA/558-Wormholes.cpp">[1] O(|V| * |E|)</a> UVA 558 - Wormholes (Graph - Negative Cycles)</li>
           <li><a href="CODEFORCES/div3/617-E-graph.cpp">[1] </a> CODEFORCES 617 - E - String Coloring, Easy Version (Graph - Bipartite)</li>  
+          <li><a href="OBI/2010/reuniao.cpp">[OBI- 2010 - Reuniao] </a> Floyd Warshall </li>  
       </ul>
     </li>
     <li>

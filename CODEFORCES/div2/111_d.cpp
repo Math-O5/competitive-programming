@@ -1,5 +1,7 @@
-// problem:
-// http://codeforces.com/contest/160/problem/D
+// source:
+// https://neps.academy/lesson/196
+// https://cp-algorithms.com/graph/mst_kruskal.html
+
 #include <iostream>
 #include <vector>
 #include <map>
@@ -20,12 +22,77 @@ using namespace std;
 
 const int INF = 0x3f3f3f3f;
 
+int pai[MAXN], peso[MAXN], n, m, a, b;
+map<pair<int, int>, int> mst;
+// arestas
+struct edge {
+    int x, y, cost;
+    bool operator<(const edge& b) {
+        return cost < b.cost; 
+    }
+};
+
+vector<edge> e;
+
+// union find (DSU)
+int find(int x) {
+    if(pai[x] == x) 
+        return x;
+    return pai[x] = find(pai[x]);
+}
+
+// Put two teams in same team since now.
+void join(int x, int y) {
+    x = find(x); y = find(y);
+    if(x == y) return;    
+    if(peso[x] > peso[y]) {
+        pai[x] = y;
+        peso[y] += peso[x];
+    }
+    else {
+        pai[y] = x;
+        peso[x] += peso[y];
+    }
+}
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
-    int n;
-    cin >> n;
+
+    edge aux;
+
+    cin >> n >> m;
+
+
+
+    // input
+    for(int i = 0; i < m; ++i) {
+        cin >> aux.x >> aux.y >> aux.cost;
+        e.push_back(aux);
+    }
+
+    // Strategy: take the lightless edge which isnot in our component
+    sort(e.begin(), e.end());
+
+
+    for(int i = 1; i <= n; ++i) {
+    // initialition, all nodes is themselves fathers, that means each vertex is a component.
+        for(int i = 0; i < m; ++i) {
+            pai[i] = i;
+        }  
+
+        for(int i = 0; i < m; ++i) {
+            if( find(e[i].x) != find(e[i].y)) {
+                join(e[i].x, e[i].y);
+                mst[make_pair(e[i].x, e[i].y)]++;
+            }
+        }
+    }
+
+    for(int i = 0; i < m; ++i)  {
+        cout << mst[make_pair(e[i].x, e[i].y)] << endl;
+    }
+
     return 0;
 }

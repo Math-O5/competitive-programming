@@ -24,16 +24,22 @@ int main() {
     
     while(n--) {
     	cin >> str;
-        s.clear();
+
+        // while is not empty
+        while(!s.empty())
+            s.pop();
+
         for(auto i: str) {
-            if(!s.empty() || !comp(s.top(), i) ) {
+
+            // while is empty or the character did not match
+            if(s.empty() || !comp(s.top(), i) ) {
             	s.push(i);
             } else {
             	s.pop();
             }
         }
         
-        if(!srt.size()) {
+        if(!s.size()) {
         	cout << "S\n";
         } else {
             cout << "N\n";

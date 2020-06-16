@@ -79,7 +79,6 @@ int main()
     // Strategy: take the lightless edge which isnot in our component
     sort(e.begin(), e.end());
 
-
     for(int i = 0; i < m; ++i) {
         if( find(e[i].x) != find(e[i].y)) {
             join(e[i].x, e[i].y);
@@ -88,7 +87,7 @@ int main()
     }
 
     for(int i = 1; i < n; ++i) 
-        cout << mst[i].x << " " << mst[i].y << " " << mst[i].cosst << "\n";
+        cout << mst[i].x << " " << mst[i].y << " " << mst[i].cost << "\n";
 
     return 0;
 }
