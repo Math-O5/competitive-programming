@@ -30,6 +30,17 @@
       </ul>
     </li>
     <li>
+     <h2>Strings - <a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Fundamentals_of_data_structures/Graphs" target="_blank">Strings in CP</a></h2>
+      <ul>
+        <li><a href="ALGORITHMS/strings/counting_sort.cpp" target="_blank">[1]</a> Counting Sort</li>
+        <li><a href="ALGORITHMS/strings/radix_sort.cpp" target="_blank">[1]</a> Radix Sort</li>
+      </ul>
+      <h2>Pratice Strings</h2>
+      <ul>
+          <li><a href="OBI/2010/fusões.cpp">[1]</a><a href="OTHERS/guildas.cpp">[2]</a> OBI Fusões - Guildas (Graph - Union Find)</li>
+      </ul>
+    </li>
+    <li>
      <h2>Graph - <a href="https://en.wikibooks.org/wiki/A-level_Computing/AQA/Paper_1/Fundamentals_of_data_structures/Graphs" target="_blank">Graph in CP (Grafos)</a></h2>
       <ul>
         <li><a href="ALGORITHMS/graph/union-find.cpp" target="_blank">[1]</a> Union Find (DSU)</li>
