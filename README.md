@@ -34,6 +34,8 @@
       <ul>
         <li><a href="ALGORITHMS/strings/counting_sort.cpp" target="_blank">[1]</a> Counting Sort</li>
         <li><a href="ALGORITHMS/strings/radix_sort.cpp" target="_blank">[1]</a> Radix Sort</li>
+        <li><a href="ALGORITHMS/strings/prefix_function.cpp" target="_blank">[O(n)]</a> Prefix Function</li>
+        <li><a href="ALGORITHMS/strings/matching_01.cpp" target="_blank">[O(mn)]</a> KMP Naive</li>
       </ul>
       <h2>Pratice Strings</h2>
       <ul>
