@@ -39,7 +39,6 @@ int main()
                 // tol - turnOn is the total lamps on minus the lamps that is already on in range
                 // k - prefix is how much lamps must go on
             //}
-            
         }
         
         cout << ans << endl;
