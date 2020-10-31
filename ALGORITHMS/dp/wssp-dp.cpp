@@ -5,6 +5,17 @@
 
     Pick the maxxium subset of S less or equal than W:
 
+    items : valor, pes
+
+    Solution: 
+        S is the set of items picked.
+        w[i] is the weight of object i
+
+        n not in S, so OPT(n) = OPT(n-1, W)
+        n in S, so OPT(n-1, W - w[i])
+
+    then dp: source: http://www.lcad.icmc.usp.br/~jbatista/scc210/ProgDin1.pdf
+
 */
 
 #include <vector>

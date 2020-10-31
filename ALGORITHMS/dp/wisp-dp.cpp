@@ -1,6 +1,7 @@
 /*
     Weighted Interval Schedule Problem
 
+    // Incio e Fim dos intervalos 
     1 <= begin <= end 
 
     Input: List of integers begin time task and end.
@@ -13,6 +14,7 @@
 
     tasks : Each tasks with your interval (begin, end)
     p(j)  : Greater indice i < j, such  that the intervals i  and j are disjunts. 
+    memo() : 
 
     1. Sort intervals by ending time.
     2. Calculate p
@@ -64,6 +66,7 @@ bool mySort(pair<int, int> tasks1, pair<int, int> tasks2) {
     return false;
 }
 
+// O(n^n)
 void calculate_p() {
    for(int i = 1; i < (int)tasks.size(); ++i) {
         int j = i - 1;

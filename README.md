@@ -69,10 +69,12 @@
       </ul>
     </li>
     <li>
-      <h2>Greedy Problems</h2>
+      <h2>Greedy / Brute Force Problems</h2>
       <ul>
         <li><a href="OBI/2010/dentista_1.cpp">[1] O(N logn N) - [2] O(N) </a> OBI 2010 Dentista (Intervel schedule)</li>
-        <li><a href="CODEFORCES/div3/617-E-greedy.cpp">[1] </a> CODEFORCES 617 - E - String Coloring, Easy Version (Greedy Solution)</li>  
+        <li><a href="CODEFORCES/div3/617-E-greedy.cpp">[1] </a> CODEFORCES 617 - E - String Coloring, Easy Version (Greedy Solution)</li>
+        <li><a href="CODEFORCES/FREE_CAMP/gulosos/palindromic_path.cpp">[1] </a> CODEFORCES - Palindromos</li>
+        <li><a href="CODEFORCES/ALGORITHMS/greedy/knights.cpp">[1] </a> </li>
       </ul>
     </li>
     <li>

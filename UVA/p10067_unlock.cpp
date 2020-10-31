@@ -17,10 +17,11 @@ struct State {
 };
 
 int forb[10000];
+
 //map<string, int> forbidden;
 int n, m, display[4], unlock[4];
 int moves[8][4] = {
-    { 1, 0, 0, 0},
+    { 1, 0, 0, 0},  
     { 0, 1, 0, 0},
     { 0, 0, 1, 0},
     { 0, 0, 0, 1},
@@ -63,19 +64,20 @@ string arrayToString(State s)
 
 int nearestUnlock(State v)
 {
-    return min(abs(v.first-unlock[0]), (10+v.first) - unlock[0]) +
-           min(abs(v.second-unlock[1]), (10+v.second) - unlock[1]) + 
-           min(abs(v.third-unlock[2]), (10+v.third) - unlock[2]) +
-           min(abs(v.forth-unlock[3]), (10+v.forth) - unlock[3]);
+    return min(abs(v.first-unlock[0]), (10+min(v.first, unlock[0]) - max(v.first,unlock[0]))) +
+           min(abs(v.second-unlock[1]), (10+min(v.second, unlock[0]) - max(v.first,unlock[1]))) + 
+           min(abs(v.third-unlock[2]), (10+min(v.third, unlock[0]) - max(v.first,unlock[2]))) +
+           min(abs(v.forth-unlock[3]), (10+min(v.forth, unlock[0]) - max(v.first,unlock[3])));
 }
 
+// validacao
 int next(int x) {
     if( x < 0) x = 9;
     if( x > 9) x = 0;
     return x;
 }
 /*
-    f = h * g
+    f = h + g
     h = the nearst answer
     g = the lower lv
 */ 
@@ -83,10 +85,14 @@ vector<int> ans;
 void openLock() {
     
     // pq <f, safe states>
-    priority_queue<pair<int, State>, vector<pair<int, State>>, compPq> pq;
+    // priority_queue<pair<int, State>, vector<pair<int, State>>, compPq> pq;
+    queue<State> q;
     State aux(display[0], display[1], display[2], display[3], 0);
+
     aux.moveSum = 0;
-    pq.push(make_pair(0,aux));
+    
+    // pq.push(make_pair(0,aux));
+    q.push(aux);
     forb[stoi(arrayToString(aux))] = 1;
 
     int h = nearestUnlock(aux);
@@ -94,12 +100,12 @@ void openLock() {
         cout << "0\n";
         return;
     }
-    while(!pq.empty())
+    while(!q.empty())
     {
-        State u(pq.top().second);
+        State u(q.front());
         int g = u.g;
         //cout << u.first << u.second << u.third << u.forth << u.g;
-        pq.pop();
+        q.pop();
 
         for(int i = 0; i < 8; ++i)
         {
@@ -113,13 +119,18 @@ void openLock() {
                 }
                 int f = (g+1)+h;
                 //cout << f << ' ' << g << ' ' << h << " --- ";
-                pq.push(make_pair(f, v));
+                q.push(v);
             }
         }
     }
+    while (!q.empty())
+    {
+        q.pop();
+    }
+    
     if(ans.size())  
     {
-        sort(ans.begin(), ans.end());
+        // sort(ans.begin(), ans.end());
         cout << ans[0] << '\n';
     }else
         cout << -1 << '\n';

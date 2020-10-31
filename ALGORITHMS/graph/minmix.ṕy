@@ -1,0 +1,25 @@
+function minmax(position, depth, alpha, beta, isMyPlayer):
+    if depth == 0 or !valid(position):
+        return //
+    if isMyPlayer:
+        actualNode = -infinity;
+        for child in position:
+            calc = minmax(child, depth - 1, alpha, beta, false);
+            actualNode = max(actualNode, calc);
+            alpha = max(alpha, calc);
+            if(beta <= alpha):
+                break;
+        return actualNode; 
+
+    if not isMyPlayer:
+        actualNode = infinity;
+        for child in position:
+            calc = minmax(child, depth - 1, alpha, beta, false);
+            alpha = min(beta, calc);
+            actualNode = min(actualNode, calc);
+            if(beta <= alpha):
+                break;
+        return actualNode; 
+
+// minmax
+minmax(currentPosition, 3, -infinity, +infinity, true);
