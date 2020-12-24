@@ -15,7 +15,7 @@ import os
 # Time: O(nlogn + n)
 # Find three numbers with same criteria
 # Soluiton: Take the first of the list, apply the find two numbers function with the remain list e gold number decrease by the choose number,
-# if it find no solution, remove the previous choosed number and take the second number and apply the function, until list
+# if it find no solution, remove the previous chosen number and take the second number and apply the function, until list
 # ends of find the numbers.
 
 GOLD_NUMBER = 2020
