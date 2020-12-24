@@ -7,6 +7,9 @@
 <p>The link of the problems is commented first line of each code</p>
 <ul>
     <li>
+      <h2>Advent of the Code <a href="https://github.com/Math-O5/competitive-programming/tree/master/ADVENT_OF_THE_CODE">solutions</a></h2>
+    </li>
+    <li>
       <h2>DP - <a href="https://en.wikipedia.org/wiki/Dynamic_programming" target="_blank">Programming Dinamic</a></h2>
       <ul>
         <li><a href="ALGORITHMS/dp/range-sum.cpp" target="_blank">[1]</a> Range Sum</li>
