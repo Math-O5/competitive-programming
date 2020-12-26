@@ -10,6 +10,8 @@ This is a event for trainning programming skills as optimization, problem solvin
     <li><a href="https://adventofcode.com/2020/day/3">Day 3 - Toboggan Trajectory</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/3-toboggan-trajectory.py">Solution</a></li>
     <li><a href="https://adventofcode.com/2020/day/4">Day 4 - Passport Processing</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/4-passport-processing.py">Solution</a></li>
 </ul>
+    <li><a href="https://adventofcode.com/2020/day/5">Day 5 - Binary Boarding</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/5-binary-boarding.py">Solution</a></li>
+</ul>
 
 ## Thanks
 For the organizator of <a href="https://adventofcode.com/2020">Advent Of The Code</a> and <a href="https://github.com/KanegaeGabriel/advent-of-code-2020">Gabriel Kanegae</a> for share it and for the tips on Github.
