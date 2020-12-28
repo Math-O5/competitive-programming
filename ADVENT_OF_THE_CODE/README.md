@@ -10,7 +10,8 @@ This is a event for trainning programming skills as optimization, problem solvin
     <li><a href="https://adventofcode.com/2020/day/3">Day 3 - Toboggan Trajectory</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/3-toboggan-trajectory.py">Solution</a></li>
     <li><a href="https://adventofcode.com/2020/day/4">Day 4 - Passport Processing</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/4-passport-processing.py">Solution</a></li>
     <li><a href="https://adventofcode.com/2020/day/5">Day 5 - Binary Boarding</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/5-binary-boarding.py">Solution</a></li>
-    <li><a href="https://adventofcode.com/2020/day/6">Day 6 - Custom Customs</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/5-binary-boarding.py">Solution</a></li>
+    <li><a href="https://adventofcode.com/2020/day/6">Day 6 - Custom Customs</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/6-custom-custom.py">Solution</a></li>
+    <li><a href="https://adventofcode.com/2020/day/7">Day 7 - Handy Haversacks</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/7-handy-haversacks.py">Solution</a></li>
 </ul>
 
 ## Thanks
