@@ -14,6 +14,7 @@ This is a event for trainning programming skills as optimization, problem solvin
     <li><a href="https://adventofcode.com/2020/day/7">Day 7 - Handy Haversacks</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/7-handy-haversacks.py">Solution</a></li>
     <li><a href="https://adventofcode.com/2020/day/8">Day 8 - HandHeld Halting</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/8-handheld-halting.py">Solution</a></li>
     <li><a href="https://adventofcode.com/2020/day/9">Day 9 - Encoding Error</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/9-encoding-error.py">Solution</a></li>
+    <li><a href="https://adventofcode.com/2020/day/10">Day 10 - Adapter Array</a> - <a href="https://github.com/Math-O5/competitive-programming/blob/master/ADVENT_OF_THE_CODE/2020/10-adapter-array.py">Solution</a></li>
 </ul>
 
 ## Thanks
