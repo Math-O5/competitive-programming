@@ -10,6 +10,7 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> 
 vector<int> adj[MAX], w[MAX]; // vertex adjacent to ith
 int n, m, a, b, c, dist[MAX], component[MAX]; // distance from origh
 
+// Return the sum of the Minimum Spanning Tree from the Graph
 int prim(int s) 
 {
     for(int i = 0; i < n; ++i)
@@ -22,9 +23,12 @@ int prim(int s)
         pq.pop();
         component[u] = -1;
         
+	// For each neighbot of u
         for(int i = 0; i < adj[u].size(); ++i)
         {
             int v = adj[u][i];
+
+	    // If the new arest is smaller than the previos, then update it
             if(dist[v] > w[u][i] && !component[v]) {
                 dist[v] = w[u][i];
                 pq.push(make_pair(dist[v], v));
