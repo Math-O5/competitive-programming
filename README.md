@@ -2,15 +2,14 @@
 
   Here are some resolutions of competitive programming. I like to do this problems to improve my skills coding, distract from the dayly tasks. Note, this code is really messy up, since is done only to be 'accepted".  
 
-# Algorithms
-<p>My implementations / solutions:</p>
-<p>The link of the problems is commented first line of each code</p>
+# Algorithms and Applications
+<p>The link of the problems is commented first line of each code. The sections are splitted by Event (Advent of Code, Daily Byte and etc) and by theme (Greedy, DP and etc). If there are more than one solution, then it will be chained as follow: [1][2]. Sometime, the complexity time is given in the link, instead of enumerating [O(n)][O(nlogn)]./p>
 <ul>
     <li>
-      <h2>Advent of the Code <a href="https://github.com/Math-O5/competitive-programming/tree/master/ADVENT_OF_THE_CODE">solutions</a></h2>
+      <h2>Advent of the Code 2020 | 2021 <a href="https://github.com/Math-O5/competitive-programming/tree/master/ADVENT_OF_THE_CODE">solutions</a></h2><p>Cool challenges in increase difficulty order, summer challenges.</p>
     </li>
     <li>
-      <h2Daily Byte <a href="https://github.com/Math-O5/competitive-programming/tree/master/ADVENT_OF_THE_CODE">solutions</a></h2><p>Every day a learning day.</p>
+      <h2>Daily Byte <a href="https://github.com/Math-O5/competitive-programming/tree/master/DailyCode">solutions</a></h2><p>Every day a learning day.</p>
     </li>
     <li>
       <h2>DP - <a href="https://en.wikipedia.org/wiki/Dynamic_programming" target="_blank">Programming Dinamic</a></h2>
