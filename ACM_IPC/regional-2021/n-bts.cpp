@@ -12,15 +12,21 @@
 
 using namespace std;
 
-#define fs first
-#define sd second
-#define pb push_back
-#define vii vector<int>
-#define pii pair<int, int>
-#define MAXN 120000
 
-const int INF = 0x3f3f3f3f;
+/*
+    1 - Save all queries (players) and sort by the last positined teams
+    2 - Create an empty array of size MAXN+1 (BTS)
+    3 - Save slots attached with the year it belongs (EX: [3 2 1] save as [(3,1), (2,2), (1,3)])
+    4 - Sort the array of slots by the number of slots (attached with the year it belongs)
+    5 - Start answering the queries for the lastest positined teams -> add to BTS all slots bigger than their score, 
+    BUT keep the origial index in the array BTS.
+    6 - For each querie, return the sum in the range asked.
 
+*/
+
+/*
+    Return: the sum in range [0, index] (from zero up to the index)
+*/
 int sum(vector<int>& bts, int index) {
     int sum = 0;
     while(index > 0) {
@@ -30,6 +36,9 @@ int sum(vector<int>& bts, int index) {
     return sum;
 }
 
+/*
+    Build and update BTS
+*/
 void update(vector<int>& bts, int index, int value) {
     int n = (int)bts.size();
     while(n > index) {
@@ -38,6 +47,9 @@ void update(vector<int>& bts, int index, int value) {
     }
 }
 
+/*
+    Return: The sum in range (l, r]
+*/
 int query(vector<int>& bts, int l, int r) {
     return sum(bts, r) - sum(bts, l-1);
 }
@@ -92,6 +104,7 @@ int main()
         }
     }
 
+    // Show BTS
     // for(int i = 0; i < bts.size(); ++i)
     //     cout << bts[i] << ' ';
     // cout << endl;
