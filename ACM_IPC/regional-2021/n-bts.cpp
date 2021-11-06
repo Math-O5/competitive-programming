@@ -33,7 +33,7 @@ int sum(vector<int>& bts, int index) {
 void update(vector<int>& bts, int index, int value) {
     int n = (int)bts.size();
     while(n > index) {
-    bts[index] += 1;
+    bts[index] += value;
         index += index&(-index);
     }
 }
@@ -50,14 +50,18 @@ int main()
     int n, y;
     cin >> y >> n;
 
-    vector<int> pos(y+1), pos_copy(y+1), bts(y+1, 0), ans(n);
+    vector<vector<int>> pos(y+1);
+    vector<int> pos_copy(y+1), bts(y+1, 0), ans(n);
     vector<vector<int>> players(n);
     int a, b, j, placed, unlucky;
 
-    pos[0] = 0;
+    pos[0].push_back(0);
+    pos[0].push_back(0);
     for(int i = 1; i <= y; ++i) {
-        cin >> pos[i];
-        pos_copy[i] = pos[i];
+        cin >> a;
+        pos[i].push_back(a);
+        pos[i].push_back(i);
+        pos_copy[i] = pos[i][0];
     }
 
     for(int i = 0; i < n; ++i) {
@@ -74,8 +78,8 @@ int main()
     int end = y + 1;
     for(int i = n-1; i >=0; --i) {
 
-        while(y > 0 and pos[y] >= players[i][0]) {
-            update(bts, y, pos[y]);
+        while(y > 0 and pos[y][0] >= players[i][0]) {
+            update(bts, pos[y][1], 1);
             --y;
         }
 
@@ -88,9 +92,9 @@ int main()
         }
     }
 
-    for(int i = 0; i < bts.size(); ++i)
-        cout << bts[i] << ' ';
-    cout << endl;
+    // for(int i = 0; i < bts.size(); ++i)
+    //     cout << bts[i] << ' ';
+    // cout << endl;
 
     for(int i = 0; i < n; ++i)
         cout << ans[i] << "\n";
